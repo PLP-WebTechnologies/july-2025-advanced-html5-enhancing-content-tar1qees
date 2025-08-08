@@ -1,44 +1,130 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/ew7e64j9)
-# 📘 Assignment: Enhancing HTML5 Content & Mastering Forms
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A hacking-themed multi-section HTML5 web page with media, tables, lists, and a complete form using built-in validation." />
+  <title>Riq's Hacking Hub</title>
+</head>
 
-## Overview
+<body>
 
-This assignment focuses on elevating your HTML5 skills by working with advanced content elements and mastering the creation, structure, and validation of web forms. You will practice using lists, tables, and media to enrich page content, and then dive deep into building dynamic, user-friendly forms powered by native HTML5 features.
+  <header>
+    <h1>Welcome to Riq's Hacking Hub</h1>
+    <p>This page showcases HTML5 features using hacking-themed examples: lists, tables, media, and a secure form.</p>
+  </header>
 
-## Objectives
+  <main>
 
-You are expected to demonstrate the ability to:
+    <!-- Section: Lists -->
+    <section>
+      <h2>My Top 3 Hacking Tools</h2>
+      <ul>
+        <li>Wireshark</li>
+        <li>Burp Suite</li>
+        <li>Metasploit</li>
+      </ul>
+    </section>
 
-* Use lists and tables effectively to organize content for clarity and accessibility.
-* Embed media content such as images, audio, or video using semantic HTML5 elements.
-* Build structured HTML5 forms that are both usable and visually intuitive.
-* Apply various HTML5 form attributes to improve user interaction.
-* Use built-in validation techniques to minimize incorrect data input without relying on JavaScript.
+    <!-- Section: Tables -->
+    <section>
+      <h2>Weekly Hacking Practice Schedule</h2>
+      <table border="1">
+        <tr>
+          <th>Day</th>
+          <th>Focus Area</th>
+          <th>Hours</th>
+        </tr>
+        <tr>
+          <td>Monday</td>
+          <td>Network Scanning (Nmap)</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Web Exploits (Burp Suite)</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>Password Cracking (John the Ripper)</td>
+          <td>2</td>
+        </tr>
+      </table>
+    </section>
 
-## Instructions
+    <!-- Section: Media -->
+    <section>
+      <h2>Hacker's Inspiration</h2>
+      <img src="https://via.placeholder.com/300x150" alt="Hacking in action" />
+      <br /><br />
+      <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </section>
 
-Design a simple multi-section web page that showcases the use of lists, tables, and media, followed by a complete HTML5 form. The page should reflect thoughtful structure, usability, and clarity.
+    <!-- Section: Form -->
+    <section>
+      <h2>Join the Ethical Hacker Club</h2>
+      <form action="#" method="post" autocomplete="on">
 
-Your form should include various input types, make use of labels and fieldsets for accessibility, and apply HTML5 validation rules through attributes like `required`, `type`, `minlength`, `pattern`, and others.
+        <fieldset>
+          <legend>Personal Info</legend>
+          <label for="fullname">Full Name:</label><br />
+          <input type="text" id="fullname" name="fullname" placeholder="Your name" required minlength="3" /><br /><br />
 
-Avoid using JavaScript for validation—rely solely on native HTML5 capabilities.
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" placeholder="you@example.com" required /><br /><br />
 
-## Deliverables
+          <label for="age">Age:</label><br />
+          <input type="number" id="age" name="age" min="13" max="100" required /><br /><br />
 
-Submit a single HTML file named `enhanced-form.html`. It should include:
+          <label for="handle">Hacker Alias (no spaces):</label><br />
+          <input type="text" id="handle" name="handle" pattern="^\S+$" title="No spaces allowed" required /><br /><br />
+        </fieldset>
 
-* Well-structured content using lists, tables, and media.
-* A complete HTML5 form including a variety of input fields.
-* Correct use of form attributes such as `placeholder`, `required`, `autocomplete`, and `readonly`.
-* HTML5 validation features implemented correctly across all relevant fields.
-* A clear, accessible layout using semantic tags.
+        <fieldset>
+          <legend>Account Setup</legend>
+          <label for="password">Password:</label><br />
+          <input type="password" id="password" name="password" required minlength="6" /><br /><br />
 
-## Tips
+          <label for="confirm">Confirm Password:</label><br />
+          <input type="password" id="confirm" name="confirm" required minlength="6" /><br /><br />
 
-* Proper and meaningful use of lists, tables, and media.
-* Clarity and accessibility of form structure.
-* Correct use of form elements and attributes.
-* Effective application of native HTML5 validation.
-* Clean, well-indented, and maintainable HTML code.
+          <label for="region">Select Region:</label><br />
+          <select id="region" name="region" required>
+            <option value="">--Select--</option>
+            <option value="africa">Africa</option>
+            <option value="europe">Europe</option>
+            <option value="asia">Asia</option>
+          </select><br /><br />
 
+          <label>Experience Level:</label><br />
+          <input type="radio" name="experience" value="beginner" required /> Beginner
+          <input type="radio" name="experience" value="intermediate" required /> Intermediate
+          <input type="radio" name="experience" value="pro" required /> Pro<br /><br />
+        </fieldset>
 
+        <fieldset>
+          <legend>Why Hacking?</legend>
+          <label for="bio">Your reason for joining:</label><br />
+          <textarea id="bio" name="bio" rows="4" cols="50" placeholder="I'm passionate about cybersecurity because..." required></textarea><br /><br />
+
+          <input type="checkbox" id="terms" name="terms" required />
+          <label for="terms">I agree to follow ethical hacking practices</label><br /><br />
+        </fieldset>
+
+        <button type="submit">Join the Club</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Riq's Ethical Hacking Hub</p>
+  </footer>
+
+</body>
+</html>
